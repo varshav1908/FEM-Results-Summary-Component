@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+:root{
+    --Light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+}
+html{
+    font-family: 'Hanken Grotesk',sans-serif;
+    font-size: 14px;
+}
+body {
+    background-color: hsl(221, 100%, 96%);
+    min-height: 100vh;
+  
+  }
+
+.main{
+    height: 400px;
+    width: 500px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction:row;
+    border-radius: 20px;
+    background-color:hsl(0, 0%, 100%) ;
+   /* box-shadow: 1px 0px 20px 2px rgb(0, 0, 0, 0.4);*/
+    
+}
+.left-side{
+    background-image: linear-gradient( to bottom,var(--Light-slate-blue),var(--Light-royal-blue));
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+
+}
+.score-left {
+    padding: 50px;
+    height: 170px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background: linear-gradient(
+    180deg,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+    
+   
+  }
+.big-score {
+    color: #fff;
+    font-weight: bold;
+    font-size: 60px;
+    
+ 
+  
+}
+.small-score,
+.left-side p{
+    color:hsl(241, 100%, 89%);
+}
+.left-side p{
+    text-align: center;
+}
+.left-side .heading{
+    font-size: 20px;
+    font-weight: 500;
+    color:hsl(241, 100%, 89%) ;
+
+}
+.great{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* background-image: radial-gradient(to bottom,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0) )*/
+.right-side{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+}
+.right-side .heading{
+    font-weight: 700;
+    font-size: 20px;
+}
+.reaction,
+.memory,
+.verbal,
+.visual{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+   
+    
+    
+}
+.reaction{
+    background-color:hsla(0, 100%, 67%,0.07) ;
+}
+.reaction .name{
+    color:hsl(0, 100%, 67%) ;
+    display: flex;
+    font-weight: 700;
+}
+.reaction img,
+.memory img,
+.verbal img,
+.visual img{
+    margin-right: 7px;
+    height: 90%;
+}
+
+.memory{
+    background-color: hsla(39, 100%, 56%,0.06);
+}
+.memory .name{
+    color: hsl(39, 100%, 56%);
+    display: flex;
+    font-weight: 700;
+
+}
+.verbal{
+    background-color: hsl(166, 100%, 37%,0.08);
+}
+.verbal .name{
+    color: hsl(166, 100%, 37%);
+    display: flex;
+    font-weight: 700;
+}
+.visual{
+    background-color:hsla(234, 85%, 45%,0.08) ;
+
+}
+.visual .name{
+    color:hsl(234, 85%, 45%) ;
+    display: flex;
+    font-weight: 700;
+}
+.right-side button{
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    padding: 10px;
+    border-radius:20px;
+    width: 200px;
+    border: none;
+}
+.right-side button:hover{
+    background-color: var(--Light-royal-blue);
+}
+.black-text {
+    color: #222;
+    font-weight:800;
+}
+.grey {
+    color: rgba(87, 87, 87, 0.900);
+    font-weight: 700;
+}
+
+@media (max-width:400px){
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+        width: 100%;
+
+    }
+    .left-side{
+        width: 100%;
+        height: 50%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .right-side{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .right-side button{
+        width: 90%;
+    }
+    .right-side .heading{
+        margin-bottom: 10px;
+    }
+
+    .reaction,
+    .memory,
+    .verbal,
+    .visual{
+        width: 95%;
+}
+
+
+}
